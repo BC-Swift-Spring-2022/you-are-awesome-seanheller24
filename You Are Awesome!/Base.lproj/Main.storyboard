@@ -16,17 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Are Awesome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCh-BD-E0L">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCh-BD-E0L">
                                 <rect key="frame" x="31" y="20" width="258" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="0.4941176176" green="0.1215686351" blue="0.090196087960000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuZ-cC-C6V">
+                                <rect key="frame" x="93" y="119" width="122" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Hlr-Nq-KP9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Message"/>
+                                <connections>
+                                    <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLD-mM-bzd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hCh-BD-E0L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="1Un-JX-Ou7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KuZ-cC-C6V" secondAttribute="bottom" constant="418" id="1q1-Sy-26s"/>
+                            <constraint firstItem="KuZ-cC-C6V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="93" id="Wnq-Ur-4ZC"/>
+                            <constraint firstItem="KuZ-cC-C6V" firstAttribute="top" secondItem="hCh-BD-E0L" secondAttribute="bottom" constant="8" id="gpo-dv-6tn"/>
+                            <constraint firstItem="hCh-BD-E0L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s4b-St-oIB"/>
+                            <constraint firstItem="hCh-BD-E0L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tdZ-0F-fFu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="hCh-BD-E0L" id="NCn-xR-9qN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
